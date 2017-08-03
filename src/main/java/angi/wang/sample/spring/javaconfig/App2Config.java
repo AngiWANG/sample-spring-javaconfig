@@ -5,10 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class App2Config {
-	@Bean(initMethod = "init", destroyMethod = "destory")
-	public ISaveVideoInfoDao saveVideoInfoDao() {
-		return new SaveVideoInfoDao();
-	}
 
 	// 方法参数注入
 	@Bean
