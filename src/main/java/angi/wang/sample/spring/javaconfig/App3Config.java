@@ -4,11 +4,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class App2Config {
+public class App3Config {
+	
+	private ISaveVideoInfoDao saveVideoInfoDao;
+	
+	// 构造参数注入
+	public App3Config(ISaveVideoInfoDao saveVideoInfoDao){
+		this.saveVideoInfoDao = saveVideoInfoDao;
+	}
 
-	// 方法参数注入
 	@Bean
-	public IVideoService videoService2(ISaveVideoInfoDao saveVideoInfoDao) {
+	public IVideoService videoService3() {
 		IVideoService videoService = new VideoService(saveVideoInfoDao);
 		return videoService;
 	}

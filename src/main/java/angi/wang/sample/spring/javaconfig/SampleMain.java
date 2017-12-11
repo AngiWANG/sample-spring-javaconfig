@@ -10,5 +10,7 @@ public class SampleMain {
 		videoService1.sayHello("abc");
 		VideoService videoService2 = ctx.getBean("videoService2", VideoService.class);
 		videoService2.sayHello("def");
+		VideoService videoService3 = ctx.getBean("videoService3", VideoService.class);
+		videoService3.sayHello("ghi");
 	}
 }

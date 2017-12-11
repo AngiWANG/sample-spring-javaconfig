@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(App2Config.class)
+@Import({ App2Config.class, App3Config.class })
 public class App1Config {
 	@Bean(initMethod = "init", destroyMethod = "destory")
 	public ISaveVideoInfoDao saveVideoInfoDao() {
